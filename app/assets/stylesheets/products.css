@@ -1,0 +1,26 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+li {
+  list-style-type: none;
+}
+
+.vertical-center {
+  text-align: center;
+}
+
+.product-categories {
+  list-style-type: square;
+}
+
+.product-display-image img {
+  width: 150px;
+  height: 150px;
+}
+
+.product-display-image:hover {
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}

@@ -1,0 +1,12 @@
+- @categories.each do |category|
+  .row.category-list{ id: "categoryid_#{category.id}" }
+    .col-md-6.col-xs-12.category-title= link_to category.name, category_path(category)
+    .col-md-6.col-xs-12
+      .row
+        .col-md-3.col-xs-12.category-display-image= image_tag category.products.first.picture_link
+        .col-md-3.col-xs-12.category-list-product= category.products.first.title
+        .col-md-3.col-xs-12.category-display-image= image_tag category.products.last.picture_link
+        .col-md-3.col-xs-12.category-list-product= category.products.last.title
+
+.digg_pagination.text-center
+  = will_paginate @categories

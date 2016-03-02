@@ -1,0 +1,36 @@
+.text-center
+  %p
+    = image_tag @product.picture_link
+  %h4
+    = @product.title
+    ="| $#{Money.us_dollar(@product.price*100)}"
+  %p
+  -if @product.in_stock?
+    = "Current stock: " + @product.quantity.to_s
+  -else
+    = "Out of Stock!"
+
+  %p
+    = "Categories: "
+    .list-categories
+      %ul
+        - @product.categories.each do |category|
+          %li.product-categories= category.name
+  %p= @product.description
+  .quantity-cart-view
+    .product-buttons
+      -if !@product.in_stock? || !current_user
+        %button.btn.btn-default.out-of-stock-btn
+          Add to
+          %span.glyphicon.glyphicon-shopping-cart
+        - if !current_user
+          .alert.alert-info
+            = "You need to sign in or sign up to add to cart!"
+      -elsif current_user && current_user.has_no_cart? && @order_detail
+        = render 'order_details/edit'
+      -else @order_detail = OrderDetail.new
+        = render 'order_details/new'
+
+  = link_to "Back to Home", root_path, class: "btn btn-default"
+
+

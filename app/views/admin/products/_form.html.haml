@@ -1,0 +1,40 @@
+- if @product.errors.any?
+  #error_explanation
+    .alert.alert-danger
+      / %h2= pluralize(@product.errors.count, "error") + " prohibited this product from being saved:"
+      %ul
+        - @product.errors.full_messages.each do |msg|
+          %li= msg
+
+.form-container.form-inline
+  = form_for [:admin, @product] do |f|
+    .form-group.col-md-6.col-xs-12.text-center
+      %p= f.label :title
+      %p= f.text_field :title
+    .form-group.col-md-6.col-xs-12.text-center
+      %p= f.label :price
+      %p= f.number_field :price, :step => 0.01
+    .form-group.col-md-6.col-xs-12.text-center
+      %p= f.label :description
+      %p= f.text_area :description
+    .form-group.col-md-6.col-xs-12.text-center
+      %p= f.label :stock
+      %p= f.number_field :quantity, :step => 1
+    .form-group.col-md-6.col-xs-12.text-center
+      %p= f.label :picture_link
+      %p= f.text_field :picture_link
+
+    .form-group.form-checkbox.col-md-12.col-xs-12
+      %p.text-center= f.label :categories
+      %p
+        - @categories.each do |category|
+          .checkbox-list
+            - if @product.has_category?(category)
+              %input{name: "category[#{category.id}]", type: "checkbox", checked: "" }
+            - else
+              %input{name: "category[#{category.id}]", type: "checkbox"}
+            = category.name
+    .form-group.col-md-12.col-xs-12.text-center
+      %input.btn.btn-default{type: "submit", value: "Save Changes"}
+  .form-group.col-md-12.col-xs-12.text-center
+    = link_to 'Back', admin_products_path, class: "btn btn-default back-button"

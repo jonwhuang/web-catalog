@@ -1,0 +1,21 @@
+.text-center
+  %p
+    = image_tag @product.picture_link
+  %h4
+    = @product.title
+    = "| $#{Money.us_dollar(@product.price*100)}"
+  %p
+    = "Current stock: " + @product.quantity.to_s
+
+  %p
+    = "Categories: "
+    .list-categories
+      %ul
+        - @product.categories.each do |category|
+          %li.product-categories= category.name
+  %p= @product.description
+
+  = link_to "Edit", edit_admin_product_path(@product), class: "btn btn-default"
+  = link_to "Delete", admin_product_path(@product), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
+  = link_to "Back", admin_products_path, class: "btn btn-default"
+

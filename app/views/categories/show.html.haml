@@ -1,0 +1,7 @@
+%h2= @category.name
+
+= render 'products/show'
+
+
+.digg_pagination.text-center
+  = will_paginate @products
