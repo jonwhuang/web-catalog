@@ -1,13 +1,1 @@
-== README
-
-#First Iteration
-User Stories:
-
-As a user, I would want to:
-1. see a list of all the products available for purchase. - INDEX
-2. be able to see each individual product - CLICK PRODUCT
-3. be able to add new products - ADMIN
-4. be able to edit a product - ADMIN
-5. be able to delete a product from the store - ADMIN
-6. select a category and see all products in the category - CLICK CATEGORY FROM INDEX
 
