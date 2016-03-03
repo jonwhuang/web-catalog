@@ -1,10 +1,8 @@
 class Product < ActiveRecord::Base
   self.per_page = 9
   has_and_belongs_to_many :categories
-  has_many :orders_products
-  has_many :orders, through: :orders_products, source: :order
 
-  validates :title, :description, :price, :quantity, presence: true
+  validates :title, :description, :price, presence: true
   validates :quantity, numericality: { greater_than_or_equal_to: 0 }
   validate :has_at_least_one_category
 
@@ -18,10 +16,6 @@ class Product < ActiveRecord::Base
         self.categories << Category.find(key)
       end
     end
-  end
-
-  def in_stock?
-    self.quantity > 0
   end
 
   private
