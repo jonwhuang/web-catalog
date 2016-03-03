@@ -11,7 +11,6 @@
     %th Title
     %th.hide-on-mobile Description
     %th Price
-    %th Stock
     %th
     %th
   -@products.each do |product|
@@ -25,7 +24,6 @@
       - else
         %td.hide-description-mobile= product.description
       %td= "$#{Money.us_dollar(product.price*100)}"
-      %td= product.quantity
       %td
         = link_to edit_admin_product_path(product) do
           %span.glyphicon.glyphicon-pencil

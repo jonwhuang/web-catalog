@@ -13,11 +13,6 @@
       - if current_user && current_user.admin?
         %li= link_to "Inventory Admin", admin_path
       - if current_user
-        %li= link_to "Order History", user_orders_path(current_user)
-        %li
-          = link_to '/cart' do
-            %span.glyphicon.glyphicon-shopping-cart
         %li= link_to "Logout", '/users/sign_out', method: :delete
       - else
-        %li= link_to "Register", '/users/sign_up'
         %li= link_to "Login", '/users/sign_in'
