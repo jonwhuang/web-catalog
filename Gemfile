@@ -14,11 +14,5 @@ gem 'money'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
   gem 'pry-rails'
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
 end
