@@ -17,4 +17,4 @@
         %li= link_to "Logout", '/users/sign_out', method: :delete
       - else
         %li= link_to "Login", '/users/sign_in'
-      %li.contact-page= link_to "Contact Us", '#'
+      %li.contact-page{ "data-toggle" => "modal", "data-target" => "#contact-overlay"}= link_to "Contact Us", '#'
