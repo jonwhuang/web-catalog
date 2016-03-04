@@ -8,6 +8,6 @@ class ProductsController < ApplicationController
   end
 
   def home
-    @products = Product.order("RANDOM()").limit(9)
+    @products = Product.order("RANDOM()").limit(4)
   end
 end

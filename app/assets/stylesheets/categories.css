@@ -13,11 +13,6 @@
   margin-top: 3%;
 }
 
-/* For Debugging Only */
-/*.category-list li {
-  border: 1px solid red;
-}*/
-
 .category-list-product {
   text-align: center;
   margin-top: 8%;
@@ -26,6 +21,16 @@
 .category-display-image img{
   height: 100px;
   width: 100px;
+}
+
+.sidebar-container {
+  float: left;
+  width: 200px;
+}
+
+.main-container {
+  float: right;
+  width: calc(95% - 200px);
 }
 
 @media only screen and (max-width: 767px) {
@@ -37,4 +42,6 @@
   .category-list-product {
     margin-top: 0;
   }
+
+
 }
