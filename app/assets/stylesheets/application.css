@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  font-family: Arial !important;
+ }
+
+ body .feature-heading,
+ body .navbar,
+ body .panel-heading {
+  font-family: "PT Sans", Verdana !important;
+ }
 
  .search-form input{
   max-width: 160px;
