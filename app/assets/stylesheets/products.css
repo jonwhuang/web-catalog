@@ -21,6 +21,8 @@ li {
 
 .product-display-image {
   margin-bottom: 10px;
+  border-radius: 50%;
+  padding: 20px;
 }
 
 .product-display-image img {
@@ -29,9 +31,19 @@ li {
 }
 
 .product-display-image:hover {
-  border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed;
+  box-shadow: 0 0 10px #d3d3d3;
   cursor: pointer;
+}
+
+.product-display-image a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+.product-display-image a:hover {
+  color: black;
 }
 
 .feature-heading {

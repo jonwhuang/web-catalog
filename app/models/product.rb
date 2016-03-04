@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  self.per_page = 9
+  self.per_page = 12
   has_and_belongs_to_many :categories
 
   validates :title, :description, :price, presence: true

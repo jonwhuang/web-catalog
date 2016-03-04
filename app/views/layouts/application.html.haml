@@ -15,7 +15,9 @@
     .container
       = render 'layouts/navbar'
       = render 'layouts/contact'
-      = render 'products/modal'
+      .modal.fade#product-modal{"tabindex" => "-1", "role" => "dialog"}
+        .modal-dialog
+          .modal-content.text-center
       - if notice
         .alert.alert-success= notice
       - if alert

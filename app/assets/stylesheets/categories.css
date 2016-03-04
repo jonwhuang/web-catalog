@@ -3,8 +3,11 @@
 }
 
 .category-list:hover {
-  border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
+}
+
+.category-list a:hover {
+  color: #337ab7;
 }
 
 .category-title {

@@ -16,13 +16,9 @@ var showProductDetails = function(e) {
 
   $.ajax({
     method: "get",
-    url: "/products/" + productId,
-    dataType: 'json'
+    url: "/products/" + productId
   }).done(function(response){
-    $('#product-modal .modal-title').html(response.title);
-    $('#product-img-modal img').attr("src", response.picture_link);
-    $('#product-price-modal').html("$" + response.price);
-    $('#product-desc-modal').html(response.description);
+    $('#product-modal .modal-content').html(response);
   });
 
   $('#product-modal').modal('show');

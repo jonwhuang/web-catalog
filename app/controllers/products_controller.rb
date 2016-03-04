@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     if request.xhr?
-      render json: @product
+      render "_modal", layout: false
     end
   end
 
