@@ -42,5 +42,8 @@
     margin-top: 0;
   }
 
+  .navbar.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #31708f;
+  }
 
 }
