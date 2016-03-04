@@ -14,6 +14,14 @@
  *= require_self
  */
 
+ .search-form input{
+  max-width: 160px;
+ }
+
+ .search-form {
+  display: inline-block;
+ }
+
 .btn.btn-default {
   color: #337ab7;
   margin-bottom: 10px;
