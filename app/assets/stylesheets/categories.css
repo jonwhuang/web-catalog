@@ -11,7 +11,7 @@
 }
 
 .category-title {
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 3%;
 }
 
@@ -49,4 +49,17 @@
     color: #31708f;
   }
 
+}
+
+@media only screen and (max-width: 500px) {
+
+  .sidebar-container {
+    float: none;
+    display: none;
+  }
+
+  .main-container {
+    float: right;
+    width: 100%;
+  }
 }

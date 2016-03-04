@@ -1,8 +1,6 @@
 .sidebar-container
   =render 'layouts/search'
   .panel.panel-info
-    .panel-heading
-      %h3.text-center Categories
     .panel-body
       - Category.all.each do |category|
         .row.category-list{ id: "categoryid_#{category.id}" }
