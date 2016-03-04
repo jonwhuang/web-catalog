@@ -10,7 +10,8 @@ var bindProductListeners = function(){
   $(".product-display-image").mouseover(removeLinkUnderline);
 }
 
-var showProductDetails = function() {
+var showProductDetails = function(e) {
+  e.preventDefault();
   var productId = $(this).find('a').attr('href').match(/products\/(\d+)/)[1];
 
   $.ajax({
