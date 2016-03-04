@@ -1,25 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 Category.delete_all
 Product.delete_all
 
 User.create(email: "admin@admin.com", password: "secret", admin: true)
 
-Category.create(name: "Office")
-Category.create(name: "Books")
-Category.create(name: "Entertainment")
-Category.create(name: "Music")
-Category.create(name: "Furniture")
-Category.create(name: "Home")
-Category.create(name: "Gifts")
-Category.create(name: "Clothing")
-Category.create(name: "Outdoors")
-Category.create(name: "Baby")
+Category.create(name: "Men's")
+Category.create(name: "Women's")
+Category.create(name: "Kids'")
+Category.create(name: "Casual Shoes")
+Category.create(name: "Dress Shoes")
+Category.create(name: "Boots")
+Category.create(name: "Sandals")
+Category.create(name: "Sneakers")
+Category.create(name: "Slippers")
+Category.create(name: "Heels")
+Category.create(name: "Flats")
+
 
 20.times do
   new_product = Product.new(title: Faker::Commerce.product_name, description: Faker::Hacker.say_something_smart, price: Faker::Commerce.price, picture_link: Faker::Avatar.image(Faker::Name.first_name, "150x150"))
