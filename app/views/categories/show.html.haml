@@ -1,6 +1,7 @@
-%h2= @category.name
-
-= render 'products/show'
+=render 'categories/sidebar'
+.main-container
+  %h1.feature-heading= @category.name
+  = render 'products/show'
 
 
 .digg_pagination.text-center

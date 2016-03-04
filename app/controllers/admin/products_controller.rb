@@ -4,7 +4,7 @@ class Admin::ProductsController < ApplicationController
   before_filter :verify_admin
 
   def index
-    @products = Product.paginate(:page => params[:page]).order(:id)
+    @products = Product.paginate(:page => params[:page], :per_page => 10).order(:id)
   end
 
   def show

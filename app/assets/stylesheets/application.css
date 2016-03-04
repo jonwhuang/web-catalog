@@ -64,6 +64,7 @@
 }
 
 .digg_pagination {
+  clear: both;
   background: white;
   cursor: default;
   margin-top: 10px;
