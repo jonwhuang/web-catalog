@@ -9,6 +9,9 @@ class Admin::ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    if request.xhr?
+      render "_modal", layout: false
+    end
   end
 
   def new

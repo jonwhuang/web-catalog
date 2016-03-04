@@ -9,3 +9,5 @@
     = "$#{Money.us_dollar(@product.price*100)}"
 
   %p#product-desc-modal= @product.description
+  = link_to "Edit", edit_admin_product_path(@product), class: "btn btn-default"
+  = link_to "Delete", admin_product_path(@product), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
