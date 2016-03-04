@@ -23,4 +23,9 @@ li {
 .product-display-image:hover {
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
+  cursor: pointer;
+}
+
+.feature-product {
+  color: #31708f;
 }

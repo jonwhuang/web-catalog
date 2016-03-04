@@ -27,19 +27,11 @@
   text-decoration: none;
 }
 
-.btn.btn-default.sign-up-button {
-  margin-top: 5px;
-}
-
 .btn.btn-default.back-button {
   width: 150px;
 }
 
-.btn.btn-default.out-of-stock-btn {
-  color: grey;
-}
-
-.navbar.navbar-default {
+.navbar.panel-primary {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -51,10 +43,20 @@
 .carousel-inner {
   max-width: 1200px;
   max-height: 300px;
+  overflow: hidden;
 }
 
 .slide-image {
   overflow: hidden;
+}
+
+.navbar.navbar-default .navbar-nav>li>a,
+.navbar.navbar-default a {
+  color: #31708f;
+}
+
+.navbar.navbar-default .navbar-toggle .icon-bar {
+  background-color: #31708f;
 }
 
 .digg_pagination {

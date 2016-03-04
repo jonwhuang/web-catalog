@@ -1,5 +1,4 @@
 .category-list {
-  border: 1px solid black;
   margin-top: 10px;
 }
 
@@ -9,13 +8,17 @@
 }
 
 .category-title {
-  font-size: 50px;
+  font-size: 15px;
   margin-top: 3%;
 }
 
 .category-list-product {
   text-align: center;
   margin-top: 8%;
+}
+
+.category-title:hover {
+  cursor: pointer;
 }
 
 .category-display-image img{
@@ -34,10 +37,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .category-list {
-    text-align: center;
-    border: none;
-  }
 
   .category-list-product {
     margin-top: 0;
