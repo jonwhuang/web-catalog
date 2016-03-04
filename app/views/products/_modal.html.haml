@@ -1,0 +1,13 @@
+.modal.fade#product-modal{"tabindex" => "-1", "role" => "dialog"}
+  .modal-dialog
+    .modal-content.text-center
+      .modal-header
+        %button.close{"type" => "button", "data-dismiss" => "modal"}
+          %span.glyphicon.glyphicon-remove
+        %h2.modal-title=""
+      .modal-body
+        %p#product-img-modal
+          = image_tag ""
+        %h4#product-price-modal
+
+        %p#product-desc-modal
