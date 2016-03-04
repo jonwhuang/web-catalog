@@ -31,5 +31,5 @@
         = link_to admin_product_path(product), method: :delete, data: {confirm: "Are you sure?"} do
           %span.glyphicon.glyphicon-trash
 
-.digg_pagination.text-center
-  = will_paginate @products
+.custom-pagination.text-center
+  = will_paginate @products, :previous_label => raw("<span class='glyphicon glyphicon-arrow-left'></span>"), :next_label => raw("<span class='glyphicon glyphicon-arrow-right'></span>")

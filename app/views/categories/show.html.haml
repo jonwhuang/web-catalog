@@ -4,5 +4,5 @@
   = render 'products/show'
 
 
-.digg_pagination.text-center
-  = will_paginate @products
+.custom-pagination.text-center
+  = will_paginate @products, :previous_label => raw("<span class='glyphicon glyphicon-arrow-left'></span>"), :next_label => raw("<span class='glyphicon glyphicon-arrow-right'></span>")
