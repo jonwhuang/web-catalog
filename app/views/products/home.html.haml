@@ -19,7 +19,7 @@
   .row
     - @products.each do |product|
       .col-md-6.col-sm-6.col-xs-12.product-display-image
-        .col-md-12.col-sm-12.col-xs-12.vertical-center
+        .col-md-12.col-sm-12.col-xs-12.vertical-center.feature-products
           = image_tag product.picture_link
         .col-md-12.col-sm-12.col-xs-12.vertical-center
           = link_to product.title, product_path(product)

@@ -1,8 +1,5 @@
 .feature-heading.text-center ADMIN
 
-- flash.each do |message_type, message|
-  .alert{:class => "alert-#{message_type}"}
-    = message
 = link_to 'Add Product', new_admin_product_path, class: "btn btn-default"
 
 %table.table.table-responsive.table-hover
