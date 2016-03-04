@@ -59,6 +59,10 @@
   background-color: #31708f;
 }
 
+.navbar-form .btn.btn-default {
+  margin: 0;
+}
+
 .digg_pagination {
   background: white;
   cursor: default;
