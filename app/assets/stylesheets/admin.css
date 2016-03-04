@@ -30,8 +30,14 @@
   resize: none;
 }
 
+.admin-product-link:hover {
+  cursor: pointer;
+}
 
-
+.admin-product-link a:hover {
+  text-decoration: none;
+  color: #337ab7;
+}
 
 
 

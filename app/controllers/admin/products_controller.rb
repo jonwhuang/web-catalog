@@ -4,11 +4,14 @@ class Admin::ProductsController < ApplicationController
   before_filter :verify_admin
 
   def index
-    @products = Product.paginate(:page => params[:page]).order(:id)
+    @products = Product.paginate(:page => params[:page], :per_page => 10).order(:id)
   end
 
   def show
     @product = Product.find(params[:id])
+    if request.xhr?
+      render "_modal", layout: false
+    end
   end
 
   def new
@@ -58,7 +61,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :picture_link, :quantity)
+    params.require(:product).permit(:title, :description, :price, :picture_link)
   end
 
   def verify_admin

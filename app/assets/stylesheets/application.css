@@ -13,6 +13,28 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  font-family: Arial !important;
+ }
+
+ body .feature-heading,
+ body .navbar,
+ body .panel-heading {
+  font-family: "PT Sans", Verdana !important;
+ }
+
+ .hr {
+  border: 1px solid #d3d3d3;
+  margin-bottom: 30px;
+ }
+
+ .search-form input{
+  max-width: 160px;
+ }
+
+ .search-form {
+  display: inline-block;
+ }
 
 .btn.btn-default {
   color: #337ab7;
@@ -27,19 +49,11 @@
   text-decoration: none;
 }
 
-.btn.btn-default.sign-up-button {
-  margin-top: 5px;
-}
-
 .btn.btn-default.back-button {
   width: 150px;
 }
 
-.btn.btn-default.out-of-stock-btn {
-  color: grey;
-}
-
-.navbar.navbar-default {
+.navbar.panel-primary {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -48,6 +62,7 @@
   text-align: left;
   margin-left: 45%;
 }
+
 .carousel-inner {
   max-width: 1200px;
   max-height: 300px;
@@ -57,54 +72,63 @@
   overflow: hidden;
 }
 
-.digg_pagination {
-  background: white;
-  cursor: default;
-  margin-top: 10px;
-  /* self-clearing method: */ }
-  .digg_pagination a, .digg_pagination span, .digg_pagination em {
-    padding: 0.2em 0.5em;
-    display: block;
-    float: left;
-    margin-right: 1px; }
-  .digg_pagination .disabled {
-    color: #999999;
-    border: 1px solid #dddddd; }
-  .digg_pagination .current {
-    font-style: normal;
-    font-weight: bold;
-    background: #2e6ab1;
-    color: white;
-    border: 1px solid #2e6ab1; }
-  .digg_pagination a {
-    text-decoration: none;
-    color: #105cb6;
-    border: 1px solid #9aafe5; }
-    .digg_pagination a:hover, .digg_pagination a:focus {
-      color: #000033;
-      border-color: #000033; }
-  .digg_pagination .page_info {
-    background: #2e6ab1;
-    color: white;
-    padding: 0.4em 0.6em;
-    width: 22em;
-    margin-bottom: 0.3em;
-    text-align: center; }
-    .digg_pagination .page_info b {
-      color: #000033;
-      background: #6aa6ed;
-      padding: 0.1em 0.25em; }
-  .digg_pagination:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden; }
-  * html .digg_pagination {
-    height: 1%; }
-  *:first-child + html .digg_pagination {
-    overflow: hidden; }
+.navbar.navbar-default .navbar-nav>li>a,
+.navbar.navbar-default a {
+  color: #31708f;
+}
 
+.navbar.navbar-default .navbar-toggle .icon-bar {
+  background-color: #31708f;
+}
+
+.navbar-form .btn.btn-default {
+  margin: 0;
+}
+
+.custom-pagination {
+  clear: both;
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+}
+
+.custom-pagination a, .custom-pagination span, .custom-pagination em {
+  padding: 0.2em 0.5em;
+}
+
+.custom-pagination .disabled {
+  color: #aaaaaa;
+}
+
+.custom-pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: red;
+}
+
+.custom-pagination a {
+  color: #0063dc;
+  text-decoration: none;
+}
+
+.custom-pagination a:hover, .custom-pagination a:focus {
+  border-color: #003366;
+  background: #0063dc;
+  color: white;
+}
+
+.custom-pagination .page_info {
+  color: #aaaaaa;
+  padding-top: 0.8em;
+}
+
+.custom-pagination .previous_page, .custom-pagination .next_page {
+  border-width: 2px;
+}
+
+.email-label {
+  position: absolute;
+}
 
 @media only screen and (max-width: 767px) {
 
@@ -112,18 +136,8 @@
     margin: 0 auto;
   }
 
- .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-
   .navbar {
     text-align: center;
-  }
-
-  .carousel-indicators {
-    display: none;
   }
 
   .list-categories {
@@ -133,5 +147,4 @@
   .hide-on-mobile {
     display: none;
   }
-
 }

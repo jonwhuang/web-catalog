@@ -4,7 +4,7 @@
       .modal-header
         %button.close{"type" => "button", "data-dismiss" => "modal"}
           %span.glyphicon.glyphicon-remove
-        %h4.modal-title= "Contact Us!"
+        %h2.modal-title= "Contact Us!"
       .modal-body
         %p= "This is the contact page."
 
@@ -18,18 +18,16 @@
         %p
         = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in mi et elit viverra ullamcorper. Integer sit amet elementum libero. Mauris commodo ullamcorper metus, sed finibus nunc consectetur at. Etiam dictum posuere velit, ut scelerisque mi. Duis molestie odio ut ligula fringilla bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus tincidunt tellus et feugiat finibus."
 
-
-
-/ #contact-overlay.text-center
-/   %span#close.glyphicon.glyphicon-remove
-/   %p= "This is the contact page."
-
-/   %p
-/   = "Address: 633 Folsom Street, "
-/   = "San Francisco, CA 94107"
-
-/   %p
-/   = "Telephone: 123-456-7890"
-
-/   %p
-/   = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in mi et elit viverra ullamcorper. Integer sit amet elementum libero. Mauris commodo ullamcorper metus, sed finibus nunc consectetur at. Etiam dictum posuere velit, ut scelerisque mi. Duis molestie odio ut ligula fringilla bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus tincidunt tellus et feugiat finibus."
+        .text-center
+          %h3 Email Us
+          = form_tag '#' do
+            %p
+              .email-label= label_tag :name, "Name"
+              .form-group= text_field_tag :name
+            %p
+              .email-label= label_tag :email, "Email"
+              .form-group= text_field_tag :Email
+            %p
+              .email-label= label_tag :message, "Message"
+              .form-group= text_area_tag :message
+            %input.btn.btn-default{type: "submit", value: "Send Email"}

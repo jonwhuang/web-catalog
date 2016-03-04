@@ -1,9 +1,8 @@
 class Product < ActiveRecord::Base
-  self.per_page = 9
+  self.per_page = 12
   has_and_belongs_to_many :categories
 
   validates :title, :description, :price, presence: true
-  validates :quantity, numericality: { greater_than_or_equal_to: 0 }
   validate :has_at_least_one_category
 
   def has_category?(category)
