@@ -13,15 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+ .panel-body a { color: inherit; }
+
+ .row.category-list:hover { background-color:#f0f0f0;}
+
  body {
-  font-family: Arial !important;
+  font-family: 'Poiret One' !important;
  }
 
  body .feature-heading,
  body .navbar,
  body .panel-heading {
-  font-family: "PT Sans", Verdana !important;
- }
+    font-family: 'Poiret One', cursive;
+   }
 
  .hr {
   border: 1px solid #d3d3d3;
@@ -29,7 +34,7 @@
  }
 
  .search-form input{
-  max-width: 160px;
+  max-width: 165px;
  }
 
  .search-form {
@@ -37,12 +42,12 @@
  }
 
 .btn.btn-default {
-  color: #337ab7;
+  color: black;
   margin-bottom: 10px;
 }
 
 .btn.btn-default:hover {
-  color: #337ab7;
+  color: black;
 }
 
 .btn.btn-default a:hover {
@@ -65,21 +70,13 @@
 
 .carousel-inner {
   max-width: 1200px;
-  max-height: 300px;
+  height: 250px;
 }
 
 .slide-image {
   overflow: hidden;
 }
 
-.navbar.navbar-default .navbar-nav>li>a,
-.navbar.navbar-default a {
-  color: #31708f;
-}
-
-.navbar.navbar-default .navbar-toggle .icon-bar {
-  background-color: #31708f;
-}
 
 .navbar-form .btn.btn-default {
   margin: 0;
@@ -147,4 +144,49 @@
   .hide-on-mobile {
     display: none;
   }
+}
+
+.navbar {
+  font-size: 27px;
+}
+
+.navbar-header .navbar-brand {
+  font-size: 45px;
+  margin-top: 15px;
+}
+
+.navbar-inverse {
+  height: 90px!important;
+
+}
+
+.dropdown .dropdown-menu {
+  font-size: 20px;
+}
+
+.navbar-collapse li {
+  margin-top: 15px;
+}
+
+.contact-page {
+  margin-right: 25px;
+}
+
+.navbar {
+  margin-bottom: 5px!important;
+}
+
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 0px!important;
+}
+
+.sidebar-container .panel {
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 0 10px #d3d3d3;
+}
+
+.sidebar-container .panel {
+  border-right: 1px solid black;
 }
