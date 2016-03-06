@@ -82,10 +82,15 @@ li {
   padding: 0;
 }
 
+.product-display-image.feature-products {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 @media only screen and (max-width: 991px) {
 
   .feature-products .feature-product-title {
-    height: 4.5em;
+    height: 6em;
   }
 
   .feature-products .feature-product-price {
@@ -108,6 +113,6 @@ li {
 @media only screen and (max-width: 368px) {
 
   .feature-products .feature-product-title {
-    height: 4.5em;
+    height: 6em;
   }
 }
