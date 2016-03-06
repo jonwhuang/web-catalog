@@ -69,8 +69,8 @@
 }
 
 .carousel-inner {
-  max-width: 1200px;
-  height: 250px;
+  max-width: 750px;
+  max-height: 250px;
 }
 
 .slide-image {
