@@ -69,12 +69,12 @@
 }
 
 .carousel-inner {
-  max-width: 750px;
-  max-height: 250px;
+  max-height: 300px;
 }
 
 .slide-image {
   overflow: hidden;
+  width: 100%;
 }
 
 
