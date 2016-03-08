@@ -3,7 +3,7 @@
     %span.glyphicon.glyphicon-remove
   %h2.modal-title= @product.title
 .modal-body
-  %p#product-img-modal
+  #product-img-modal.vertical-center
     = image_tag @product.picture_link
   %h4#product-price-modal
     = "$#{Money.us_dollar(@product.price*100)}"

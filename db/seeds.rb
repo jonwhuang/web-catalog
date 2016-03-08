@@ -109,10 +109,6 @@ new_product = Product.new(title: Faker::Company.name + " Sneakers", description:
 new_product.categories << Category.find(2) << Category.find(7)
 new_product.save
 
-new_product = Product.new(title: Faker::Company.name + " Shoes", description: shoe_descriptions[rand(0..14)], price: Faker::Commerce.price, picture_link: "http://cache3.asset-cache.net/gc/155096664-tennis-shoes-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=9TmDLv3jDiMeJ3A8lHaOM1TJC2AJwyXQ0qiDpxH4HdY%3d")
-new_product.categories << Category.find(1) << Category.find(2) << Category.find(3) << Category.find(4) << Category.find(7)
-new_product.save
-
 new_product = Product.new(title: Faker::Company.name + " Sneakers", description: shoe_descriptions[rand(0..14)], price: Faker::Commerce.price, picture_link: "http://cache2.asset-cache.net/gc/173904072-isolated-on-white-pair-of-brand-new-trainers-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=r11FMAflHDX1SFSfVWGzmUNK33kUjPyx2%2bH75OCado4%3d")
 new_product.categories << Category.find(1) << Category.find(4) << Category.find(7)
 new_product.save
