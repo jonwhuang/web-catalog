@@ -13,6 +13,7 @@
         %ul.dropdown-menu
           - Category.all.each do |category|
             %li= link_to category.name, category_path(category)
+      %li= link_to "Our Facility", "/facility"
 
     %ul.nav.navbar-nav.navbar-right
       - if current_user && current_user.admin?
