@@ -15,12 +15,12 @@
         %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic"}
           %span.glyphicon.glyphicon-chevron-right
 
-  .hr
   .row
     - @products.each do |product|
       .col-md-6.col-sm-6.col-xs-12.product-display-image.feature-products
-        .col-md-12.col-sm-12.col-xs-12.feature-product-image
-          = image_tag product.picture_link
+        .featured-img-container
+          .col-md-12.col-sm-12.col-xs-12.feature-product-image
+            = image_tag product.picture_link
         .col-md-9.col-sm-9.col-xs-9.feature-left-container
           .col-md-12.col-sm-12.col-xs-12.feature-product-title
             = link_to product.title, product_path(product)
