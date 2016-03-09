@@ -137,9 +137,12 @@
     float:none;
     width: 85%;
   }
+
+
+
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 767px) {
   body .container {
     width: 100%;
   }
@@ -159,7 +162,17 @@
   .hide-on-mobile {
     display: none;
   }
+
+  .navbar-nav {
+    background-color:white;
+  }
+
+  .navbar-nav {
+    margin: 0px!important;
+  }
+
 }
+
 
 .navbar {
   font-size: 22px;
@@ -170,6 +183,8 @@
   margin-top: 15px;
   padding: 15px 15px 15px 35px;
 }
+
+
 
 .navbar-inverse {
   height: 90px!important;
@@ -185,7 +200,7 @@
 }
 
 .contact-page {
-  margin-right: 25px;
+  margin-right: 45px;
 }
 
 .navbar {
