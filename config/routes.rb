@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get '/admin', to: 'admin/products#index'
 
+  get '/facility' => 'pages#facilities'
+
   resources :categories
 
   resources :products
