@@ -14,6 +14,13 @@
  *= require_self
  */
 
+ body .container {
+  width: 80%;
+ }
+
+ .main-container {
+  padding: 0px 25px;
+ }
  .panel-body a { color: inherit; }
 
  .row.category-list:hover { background-color:#f0f0f0;}
@@ -124,7 +131,21 @@
   border-width: 2px;
 }
 
+@media only screen and (max-width: 691px){
+  .facilities-divider img {
+    /*display: block;*/
+    float:none;
+    width: 85%;
+  }
+
+
+
+}
+
 @media only screen and (max-width: 767px) {
+  body .container {
+    width: 100%;
+  }
 
   .form-container {
     margin: 0 auto;
@@ -141,7 +162,17 @@
   .hide-on-mobile {
     display: none;
   }
+
+  .navbar-nav {
+    background-color:white;
+  }
+
+  .navbar-nav {
+    margin: 0px!important;
+  }
+
 }
+
 
 .navbar {
   font-size: 22px;
@@ -150,7 +181,10 @@
 .navbar-header .navbar-brand {
   font-size: 45px;
   margin-top: 15px;
+  padding: 15px 15px 15px 35px;
 }
+
+
 
 .navbar-inverse {
   height: 90px!important;
@@ -166,7 +200,7 @@
 }
 
 .contact-page {
-  margin-right: 25px;
+  margin-right: 45px;
 }
 
 .navbar {

@@ -21,12 +21,10 @@
         .featured-img-container
           .col-md-12.col-sm-12.col-xs-12.feature-product-image
             = image_tag product.picture_link
-        .col-md-9.col-sm-9.col-xs-9.feature-left-container
+        .col-md-12.col-sm-12.col-xs-12.feature-left-container
           .col-md-12.col-sm-12.col-xs-12.feature-product-title
             = link_to product.title, product_path(product)
           .col-md-12.col-sm-12.col-xs-12.feature-product-desc
             = product.description
-        .col-md-3.col-sm-3.col-xs-3.feature-right-container
-          .col-md-12.col-sm-12.col-xs-12.feature-product-price
-            = "$#{Money.us_dollar(product.price*100)}"
+
 
