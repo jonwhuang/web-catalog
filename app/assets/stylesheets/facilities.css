@@ -1,21 +1,25 @@
 .facilities-container {
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Poiret One';
 }
 
 .facilities-header .facilities-title {
   font-size: 45px;
+  font-weight: bold;
   text-align: right;
 
 }
 .facilities-container .facilities-subtitle {
+  font-family: 'Architects Daughter', cursive;
   font-size:28px;
   text-decoration: underline;
   margin: 15px;
 }
 
 .facilities-description {
+  font-family: 'Architects Daughter', cursive;
+
   font-size:18px;
-  font-family: Helvetica
+  /*font-family: Helvetica*/
   /*display:inline;*/
 }
 #video-mechanic {
