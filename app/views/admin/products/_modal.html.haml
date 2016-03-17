@@ -1,0 +1,13 @@
+.modal-header
+  %button.close{"type" => "button", "data-dismiss" => "modal"}
+    %span.glyphicon.glyphicon-remove
+  %h2.modal-title= @product.title
+.modal-body
+  %p#product-img-modal
+    = image_tag @product.picture_link
+  %h4#product-price-modal
+    = "$#{Money.us_dollar(@product.price*100)}"
+
+  %p#product-desc-modal= @product.description
+  = link_to "Edit", edit_admin_product_path(@product), class: "btn btn-default"
+  = link_to "Delete", admin_product_path(@product), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"

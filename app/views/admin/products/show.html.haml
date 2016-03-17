@@ -4,8 +4,6 @@
   %h4
     = @product.title
     = "| $#{Money.us_dollar(@product.price*100)}"
-  %p
-    = "Current stock: " + @product.quantity.to_s
 
   %p
     = "Categories: "

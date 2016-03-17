@@ -1,8 +1,5 @@
-%h2 ADMIN
+.feature-heading.text-center ADMIN
 
-- flash.each do |message_type, message|
-  .alert{:class => "alert-#{message_type}"}
-    = message
 = link_to 'Add Product', new_admin_product_path, class: "btn btn-default"
 
 %table.table.table-responsive.table-hover
@@ -11,21 +8,19 @@
     %th Title
     %th.hide-on-mobile Description
     %th Price
-    %th Stock
     %th
     %th
   -@products.each do |product|
     %tr
       %td.admin-image
         = image_tag product.picture_link
-      %td
+      %td.admin-product-link
         =link_to "#{product.title}", admin_product_path(product)
       - if product.description.length >= 40
         %td.hide-on-mobile= product.description[0..39] + "..."
       - else
-        %td.hide-description-mobile= product.description
+        %td.hide-on-mobile= product.description
       %td= "$#{Money.us_dollar(product.price*100)}"
-      %td= product.quantity
       %td
         = link_to edit_admin_product_path(product) do
           %span.glyphicon.glyphicon-pencil
@@ -33,5 +28,5 @@
         = link_to admin_product_path(product), method: :delete, data: {confirm: "Are you sure?"} do
           %span.glyphicon.glyphicon-trash
 
-.digg_pagination.text-center
-  = will_paginate @products
+.custom-pagination.text-center
+  = will_paginate @products, :previous_label => raw("<span class='glyphicon glyphicon-arrow-left'></span>"), :next_label => raw("<span class='glyphicon glyphicon-arrow-right'></span>")

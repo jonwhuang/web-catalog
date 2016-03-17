@@ -19,6 +19,11 @@
   width: 300px;
 }
 
+.search-form {
+  margin-top: 20px;
+  margin-bottom:0px!important;
+}
+
 .form-group.form-checkbox input {
   width: auto;
   margin-left: 45%;
@@ -30,8 +35,14 @@
   resize: none;
 }
 
+.admin-product-link:hover {
+  cursor: pointer;
+}
 
-
+.admin-product-link a:hover {
+  text-decoration: none;
+  color: black;
+}
 
 
 

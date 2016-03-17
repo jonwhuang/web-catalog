@@ -1,0 +1,7 @@
+.sidebar-container
+  =render 'layouts/search'
+  .panel.panel-info
+    .panel-body
+      - Category.all.each do |category|
+        .row.category-list{ id: "categoryid_#{category.id}" }
+          .col-md-12.col-xs-12.category-title= link_to category.name.upcase, category_path(category)

@@ -1,0 +1,31 @@
+.modal.fade#contact-overlay{"tabindex" => "-1", "role" => "dialog"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"type" => "button", "data-dismiss" => "modal"}
+          %span.glyphicon.glyphicon-remove
+        %h2.modal-title= "Contact Us!"
+      .modal-body
+
+        %p
+        = "Address: 633 Folsom Street, "
+        = "San Francisco, CA 94107"
+
+        %p
+        = "Telephone: 123-456-7890"
+
+        %p
+        = "We welcome all inquiries. Please fill out the form below, and our representative will get back to you shortly."
+
+        .text-center
+          = form_tag '#' do
+            %p
+              .email-label= label_tag :name, "Name"
+              .form-group= text_field_tag :name
+            %p
+              .email-label= label_tag :email, "Email"
+              .form-group= text_field_tag :Email
+            %p
+              .email-label= label_tag :message, "Message"
+              .form-group= text_area_tag :message
+            %input.btn.btn-default{type: "submit", value: "Send Email"}

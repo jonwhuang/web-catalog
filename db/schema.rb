@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160211233454) do
+ActiveRecord::Schema.define(version: 20160211001751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,25 +29,6 @@ ActiveRecord::Schema.define(version: 20160211233454) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "order_details", force: :cascade do |t|
-    t.integer  "order_id"
-    t.integer  "product_id"
-    t.integer  "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer  "user_id"
-    t.boolean  "purchased",               default: false
-    t.string   "shipping_address_street"
-    t.string   "shipping_address_city"
-    t.string   "shipping_address_state"
-    t.integer  "shipping_address_zip"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
@@ -55,7 +36,6 @@ ActiveRecord::Schema.define(version: 20160211233454) do
     t.string   "picture_link", default: "http://www.muslimholidays.net/wp-content/uploads/2014/04/default-placeholder-50x50.png"
     t.datetime "created_at",                                                                                                      null: false
     t.datetime "updated_at",                                                                                                      null: false
-    t.integer  "quantity",     default: 0
   end
 
   create_table "users", force: :cascade do |t|
